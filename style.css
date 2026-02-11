@@ -18,94 +18,115 @@ body {
 }
 
 .hero {
-  padding: 140px 0;
-  background: linear-gradient(135deg, #0f1c2e 0%, #16263d 100%);
+  position: relative;
+  height: 100vh;
+  background: url('assets/background.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
-.logo {
-  width: 130px;
-  margin-bottom: 50px;
-  background: transparent;
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(15,28,46,0.85);
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2;
 }
 
 h1 {
-  font-size: 44px;
-  font-weight: 600;
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero-sub {
+  color: #c7d3e6;
   margin-bottom: 40px;
+  font-size: 18px;
 }
 
 .btn {
   display: inline-block;
-  padding: 16px 32px;
+  padding: 16px 36px;
   background-color: #2d5282;
   color: #fff;
   text-decoration: none;
   font-weight: 600;
-  border-radius: 50px; /* arredondamento premium */
+  border-radius: 60px;
   transition: 0.3s ease;
 }
 
 .btn:hover {
   background-color: #3f6aa8;
-  transform: translateY(-2px);
+  transform: translateY(-3px);
 }
 
-.visual-section {
+.services {
   padding: 120px 0;
   background-color: #111f33;
 }
 
-.visual-grid {
+.services h2 {
+  margin-bottom: 60px;
+}
+
+.cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 40px;
 }
 
 .card {
-  background-color: #16263d;
-  border-radius: 16px;
-  overflow: hidden;
-  transition: 0.3s ease;
+  background: #16263d;
+  padding: 40px;
+  border-radius: 20px;
+  transition: 0.4s ease;
+  cursor: pointer;
 }
 
 .card:hover {
-  transform: translateY(-6px);
-}
-
-.card-img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  opacity: 0.85;
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
 }
 
 .card h3 {
-  padding: 25px;
-  font-size: 18px;
-  font-weight: 500;
+  margin-bottom: 20px;
 }
 
-.cta {
+.card p {
+  color: #9fb3d1;
+}
+
+.reviews {
   padding: 120px 0;
-  background: linear-gradient(135deg, #16263d 0%, #0f1c2e 100%);
 }
 
-.cta h2 {
-  margin-bottom: 40px;
-  font-weight: 400;
+.review-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
 }
 
-.btn.secondary {
-  background-color: #ffffff;
-  color: #0f1c2e;
+.review {
+  background: #16263d;
+  padding: 40px;
+  border-radius: 20px;
+  font-style: italic;
 }
 
-.btn.secondary:hover {
-  background-color: #e2e2e2;
+.review span {
+  display: block;
+  margin-top: 20px;
+  font-style: normal;
+  color: #8fa4c4;
 }
 
 footer {
-  padding: 30px 0;
+  padding: 40px 0;
   background-color: #0c1624;
   font-size: 14px;
   color: #8fa4c4;
