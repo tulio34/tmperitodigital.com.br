@@ -225,9 +225,10 @@ h2 {
 }
 
 .contact-note {
+  margin-top: 15px;
   font-size: 14px;
   color: #9fb3cc;
-  margin-bottom: 20px;
+  text-align: left;
 }
 
 /* ===== FOOTER ===== */
