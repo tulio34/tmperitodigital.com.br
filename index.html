@@ -16,13 +16,22 @@
 
 <body>
 
+<canvas id="particles"></canvas>
+
 <header class="hero">
   <div class="overlay"></div>
   <div class="container">
     <h1>Prova Digital com Validade Jurídica</h1>
+
     <p class="hero-sub">
       Rigor técnico. Integridade da prova. Conformidade legal.
     </p>
+
+    <div class="badge-animated">
+      <span>Perito Judicial</span>
+    </div>
+
+    <br><br>
 
     <a href="mailto:contato@tmperitodigital.com.br" class="btn">
       Solicitar Avaliação Técnica
@@ -38,41 +47,53 @@
 
       <div class="card">
         <h3>Análise Forense Computacional</h3>
-        <p>Exame técnico de sistemas, arquivos, logs e recuperação de dados com preservação de cadeia de custódia.</p>
+        <p>Exame técnico de sistemas, arquivos e logs com preservação da cadeia de custódia.</p>
       </div>
 
       <div class="card">
         <h3>Perícia em Dispositivos Móveis</h3>
-        <p>Extração lógica e física de smartphones com metodologia validada e conformidade legal.</p>
+        <p>Extração lógica e física de smartphones com metodologia validada judicialmente.</p>
       </div>
 
       <div class="card">
         <h3>Assistência Técnica Judicial</h3>
-        <p>Atuação como assistente técnico, elaboração de pareceres e acompanhamento processual especializado.</p>
+        <p>Elaboração de pareceres e atuação como assistente técnico em processos judiciais.</p>
       </div>
 
     </div>
   </div>
 </section>
 
-<section class="services">
+<div class="divider"></div>
+
+<section class="stats">
+  <div class="container">
+    <div class="stat-number" data-target="120">0</div>
+    <p>Processos analisados com rigor técnico</p>
+  </div>
+</section>
+
+<section class="reviews-section">
   <div class="container">
     <h2>Avaliações</h2>
 
-    <div class="cards">
+    <div class="reviews-grid">
 
-      <div class="card review-card">
-        <p>“Atuação técnica precisa e fundamentada. Laudo claro e altamente profissional.”</p>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>“Atuação técnica precisa e fundamentada.”</p>
         <span>— Advogado, Recife/PE</span>
       </div>
 
-      <div class="card review-card">
-        <p>“Excelente domínio técnico e comprometimento com a integridade da prova.”</p>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>“Excelente domínio técnico e clareza no laudo.”</p>
         <span>— Escritório Jurídico</span>
       </div>
 
-      <div class="card review-card">
-        <p>“Análise detalhada e comunicação objetiva. Recomendo para casos complexos.”</p>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>“Profissionalismo e rigor metodológico.”</p>
         <span>— Cliente Corporativo</span>
       </div>
 
@@ -80,9 +101,87 @@
   </div>
 </section>
 
+<section class="national">
+  <div class="container">
+    <h2>Atuação Nacional</h2>
+
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Brazil_location_map.svg"
+         alt="Mapa do Brasil"
+         class="map">
+
+    <p>Atuação técnica em processos judiciais em todo o território nacional.</p>
+  </div>
+</section>
+
 <footer>
   <p>© 2026 TM Perícia Digital | Túlio Menezes</p>
 </footer>
+
+<script>
+/* CONTADOR INTELIGENTE */
+const counter = document.querySelector('.stat-number');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const target = +counter.getAttribute('data-target');
+      let count = 0;
+      const increment = target / 80;
+
+      const updateCount = () => {
+        if (count < target) {
+          count += increment;
+          counter.innerText = Math.ceil(count);
+          setTimeout(updateCount, 20);
+        } else {
+          counter.innerText = target;
+        }
+      };
+
+      updateCount();
+      observer.disconnect();
+    }
+  });
+}, { threshold: 0.5 });
+
+observer.observe(counter);
+
+/* PARTÍCULAS */
+const canvas = document.getElementById("particles");
+const ctx = canvas.getContext("2d");
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+let particles = [];
+
+for (let i = 0; i < 50; i++) {
+  particles.push({
+    x: Math.random() * canvas.width,
+    y: Math.random() * canvas.height,
+    radius: Math.random() * 2,
+    speed: Math.random() * 0.5
+  });
+}
+
+function animate() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  particles.forEach(p => {
+    p.y += p.speed;
+    if (p.y > canvas.height) p.y = 0;
+
+    ctx.beginPath();
+    ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+    ctx.fillStyle = "rgba(45,82,130,0.3)";
+    ctx.fill();
+  });
+
+  requestAnimationFrame(animate);
+}
+
+animate();
+</script>
 
 </body>
 </html>
