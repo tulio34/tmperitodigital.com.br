@@ -224,6 +224,12 @@ h2 {
   box-shadow: 0 12px 30px rgba(0,0,0,0.4);
 }
 
+.contact-note {
+  font-size: 14px;
+  color: #9fb3cc;
+  margin-bottom: 20px;
+}
+
 /* ===== FOOTER ===== */
 
 footer {
