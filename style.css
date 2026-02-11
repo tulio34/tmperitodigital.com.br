@@ -137,6 +137,25 @@ h1 {
   margin-bottom: 60px;
 }
 
+@media (max-width: 768px) {
+
+  .contact-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact-cta {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .btn-contact {
+    display: inline-block;
+  }
+
+}
+
 .contact {
   padding: 120px 0;
   background: linear-gradient(90deg, #111f33 0%, #16263d 100%);
