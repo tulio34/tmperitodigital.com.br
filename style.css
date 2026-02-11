@@ -132,6 +132,10 @@ h1 {
   color: #8fa4c4;
 }
 
+.reviews h2 {
+  margin-bottom: 60px;
+}
+
 footer {
   padding: 40px 0;
   background-color: #0c1624;
