@@ -17,6 +17,8 @@ body {
   text-align: center;
 }
 
+
+
 .hero {
   position: relative;
   height: 100vh;
@@ -38,6 +40,12 @@ body {
   z-index: 2;
 }
 
+.hero h1 {
+  font-size: 56px;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
 h1 {
   font-size: 48px;
   margin-bottom: 20px;
@@ -56,18 +64,20 @@ h1 {
   color: #fff;
   text-decoration: none;
   font-weight: 600;
-  border-radius: 60px;
+  border-radius: 50px;
   transition: 0.3s ease;
 }
 
 .btn:hover {
   background-color: #3f6aa8;
   transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
 }
 
 .services {
   padding: 120px 0;
   background-color: #111f33;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
 }
 
 .services h2 {
@@ -103,25 +113,22 @@ h1 {
 
 .reviews {
   padding: 120px 0;
+  background: linear-gradient(180deg, #0f1c2e 0%, #111f33 100%);
 }
 
-.review-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 40px;
+.review-card {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.06);
 }
 
-.review {
-  background: #16263d;
-  padding: 40px;
-  border-radius: 20px;
+.review-card p {
   font-style: italic;
+  color: #c7d3e6;
+  margin-bottom: 15px;
 }
 
-.review span {
-  display: block;
-  margin-top: 20px;
-  font-style: normal;
+.review-card span {
+  font-size: 14px;
   color: #8fa4c4;
 }
 
