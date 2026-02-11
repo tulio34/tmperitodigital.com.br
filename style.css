@@ -8,7 +8,6 @@ body {
   font-family: 'Inter', sans-serif;
   background-color: #0f1c2e;
   color: #ffffff;
-  line-height: 1.6;
 }
 
 .container {
@@ -19,96 +18,81 @@ body {
 }
 
 .hero {
-  position: relative;
-  padding: 120px 0;
+  padding: 140px 0;
   background: linear-gradient(135deg, #0f1c2e 0%, #16263d 100%);
-  overflow: hidden;
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  width: 800px;
-  height: 800px;
-  background: radial-gradient(circle, rgba(45,82,130,0.25) 0%, transparent 70%);
-  top: -200px;
-  right: -200px;
 }
 
 .logo {
-  width: 120px;
-  margin-bottom: 40px;
+  width: 130px;
+  margin-bottom: 50px;
+  background: transparent;
 }
 
 h1 {
-  font-size: 42px;
+  font-size: 44px;
   font-weight: 600;
-  margin-bottom: 20px;
-}
-
-.subtitle {
-  font-size: 18px;
-  font-weight: 300;
-  color: #c7d3e6;
   margin-bottom: 40px;
 }
 
 .btn {
   display: inline-block;
-  padding: 14px 28px;
+  padding: 16px 32px;
   background-color: #2d5282;
   color: #fff;
   text-decoration: none;
   font-weight: 600;
-  border-radius: 4px;
+  border-radius: 50px; /* arredondamento premium */
   transition: 0.3s ease;
 }
 
 .btn:hover {
   background-color: #3f6aa8;
+  transform: translateY(-2px);
 }
 
-.section {
-  padding: 100px 0;
+.visual-section {
+  padding: 120px 0;
   background-color: #111f33;
 }
 
-.section h2 {
-  font-size: 30px;
-  margin-bottom: 30px;
+.visual-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
 }
 
-.section p {
-  max-width: 800px;
-  margin: auto;
-  color: #c7d3e6;
+.card {
+  background-color: #16263d;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: 0.3s ease;
 }
 
-.services {
-  padding: 100px 0;
-  background-color: #0f1c2e;
+.card:hover {
+  transform: translateY(-6px);
 }
 
-.service {
-  margin-bottom: 50px;
+.card-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  opacity: 0.85;
 }
 
-.service h3 {
-  font-size: 22px;
-  margin-bottom: 10px;
-}
-
-.service p {
-  color: #9fb3d1;
+.card h3 {
+  padding: 25px;
+  font-size: 18px;
+  font-weight: 500;
 }
 
 .cta {
-  padding: 100px 0;
+  padding: 120px 0;
   background: linear-gradient(135deg, #16263d 0%, #0f1c2e 100%);
 }
 
 .cta h2 {
-  margin-bottom: 30px;
+  margin-bottom: 40px;
+  font-weight: 400;
 }
 
 .btn.secondary {
