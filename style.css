@@ -230,9 +230,14 @@ h2 {
 
 .mid-cta {
   padding: 110px 0;
-  background-color: #132235; /* ligeiramente diferente */
+  background: linear-gradient(
+    180deg,
+    #111a28 0%,
+    #0f1c2e 100%
+  );
   text-align: center;
-  box-shadow: inset 0 0 60px rgba(0,0,0,0.4);
+  border-top: 1px solid rgba(255,255,255,0.04);
+  border-bottom: 1px solid rgba(255,255,255,0.04);
 }
 
 .mid-cta h2 {
