@@ -254,9 +254,39 @@ footer p {
 
 
 
-/* ===== RESPONSIVO ===== */
+/* ===== MOBILE CTA FIXO ===== */
+
+.mobile-cta {
+  display: none;
+}
 
 @media (max-width: 768px) {
+
+  .mobile-cta {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #274a73;
+    text-align: center;
+    padding: 16px 20px;
+    z-index: 9999;
+    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.4);
+  }
+
+  .mobile-cta a {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  /* Evita que o botão cubra o conteúdo final */
+  body {
+    padding-bottom: 70px;
+  }
 
   .hero h1 {
     font-size: 38px;
