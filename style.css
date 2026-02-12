@@ -238,19 +238,7 @@ h2 {
 }
 
 .mid-cta h2 {
-  position: relative;
-  padding-left: 20px;
-}
-
-.mid-cta h2::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 8px;
-  width: 4px;
-  height: 28px;
-  background-color: #1f7a5c;
-  border-radius: 4px;
+  margin-bottom: 25px;
 }
 
 /* ===== FOOTER ===== */
