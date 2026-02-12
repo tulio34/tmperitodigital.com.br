@@ -228,6 +228,16 @@ h2 {
   box-shadow: 0 12px 30px rgba(0,0,0,0.4);
 }
 
+.mid-cta {
+  padding: 100px 0;
+  background-color: #0f1c2e;
+  text-align: center;
+}
+
+.mid-cta h2 {
+  margin-bottom: 30px;
+}
+
 /* ===== FOOTER ===== */
 
 footer {
@@ -241,6 +251,8 @@ footer p {
   letter-spacing: 0.5px;
   color: #7f8da6;
 }
+
+
 
 /* ===== RESPONSIVO ===== */
 
