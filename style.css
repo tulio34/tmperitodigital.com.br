@@ -229,9 +229,10 @@ h2 {
 }
 
 .mid-cta {
-  padding: 100px 0;
-  background-color: #0f1c2e;
+  padding: 110px 0;
+  background-color: #132235; /* ligeiramente diferente */
   text-align: center;
+  box-shadow: inset 0 0 60px rgba(0,0,0,0.4);
 }
 
 .mid-cta h2 {
