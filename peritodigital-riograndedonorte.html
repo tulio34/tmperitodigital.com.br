@@ -155,19 +155,24 @@
   h2 { font-size: 2rem; margin-top: 2rem; margin-bottom: 1rem; }
   h3 { font-size: 1.5rem; }
   </style>
- </head>
+ 
+<style id="visual-consistency">
+  .page-hero { position: relative; overflow: hidden; }
+  .page-hero .hero-orb-left { position:absolute; top:5rem; left:2rem; width:18rem; height:18rem; background:#4e9af1; border-radius:9999px; filter:blur(4rem); opacity:.10; }
+  .page-hero .hero-orb-right { position:absolute; bottom:1rem; right:2rem; width:24rem; height:24rem; background:#0a1628; border-radius:9999px; filter:blur(4rem); opacity:.16; }
+  .page-hero > .page-hero-content { position:relative; z-index:1; }
+  .site-logo { display:block; }
+</style>
+</head>
  <body class="h-full overflow-auto"><!-- Header -->
    <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-sm">
     <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
      <div class="flex items-center justify-between h-16 sm:h-20">
-      <div class="flex items-center gap-3">
-       <!-- 🔴 LOGO HORIZONTAL (Desktop) - Coloque seu SVG aqui -->
-       <img class="hidden sm:block h-12 w-auto object-contain" src="Assets/logo-horizontal.webp" alt="TM Perito Digital" width="200" height="48"><!-- 🔴 LOGO ÍCONE (Mobile) - Coloque seu SVG aqui -->
-       <div class="sm:hidden"><img class="w-10 h-10 object-contain" src="Assets/logo_o.webp" alt="TM Perito Digital" width="40" height="40"></div>
-       <div>
-        <span class="text-lg sm:text-xl font-bold text-dark" id="brand-name">TM Perito Digital</span>
-        <p class="text-xs text-gray-500 hidden sm:block">Perícia Digital Especializada</p>
-       </div>
+      <div class="flex items-center">
+       <a href="index.html" aria-label="TM Perito Digital - página inicial" class="site-logo">
+        <img class="hidden sm:block h-12 w-auto object-contain" src="Assets/logo-horizontal.webp" alt="TM Perito Digital" width="200" height="48">
+        <img class="sm:hidden w-10 h-10 object-contain" src="Assets/logo_o.webp" alt="TM Perito Digital" width="40" height="40">
+       </a>
       </div>
       <div class="hidden md:flex items-center gap-8">
 
@@ -191,7 +196,7 @@
     <div class="md:hidden flex items-center justify-center gap-3 pb-3 flex-wrap text-sm">
 <a href="index.html" class="text-dark-light hover:text-primary">Início</a><a href="servicos.html" class="text-dark-light hover:text-primary">Serviços</a><a href="sobre.html" class="text-dark-light hover:text-primary">Sobre</a><a href="depoimentos.html" class="text-dark-light hover:text-primary">Depoimentos</a><a href="contato.html" class="text-dark-light hover:text-primary">Contato</a>
 </div></nav>
-   </header><main class="pt-16"><section class="gradient-bg py-20 sm:py-28"><div class="max-w-5xl mx-auto px-4 text-center"><nav aria-label="Breadcrumb" class="text-sm text-white/70 mb-6"><a href="index.html" class="hover:text-white">Início</a> <span aria-hidden="true">/</span> <span>Perícia Digital em Rio Grande do Norte</span></nav><h1 class="text-3xl sm:text-5xl font-bold text-white mb-6">Perícia Digital em Rio Grande do Norte</h1><p class="text-lg text-white/80 max-w-3xl mx-auto">Atendimento técnico remoto para perícia digital e análise forense em casos relacionados a Rio Grande do Norte, com atuação em todo o Brasil.</p></div></section><section class="py-16 sm:py-24 bg-white"><div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8"><article class="prose max-w-none"><h2 class="text-3xl font-bold text-dark mb-4">Atendimento para casos em Rio Grande do Norte</h2><p class="text-lg text-gray-600 leading-relaxed mb-10">A TM Perito Digital oferece orientação inicial, análise de evidências digitais, elaboração de laudos e assistência técnica para demandas que envolvam partes, empresas ou processos em Rio Grande do Norte.</p><h2 class="text-3xl font-bold text-dark mb-4">Serviços disponíveis</h2><p class="text-lg text-gray-600 leading-relaxed mb-10">A necessidade técnica é avaliada conforme o tipo de evidência, os quesitos e os prazos do processo. Entre em contato para apresentar o caso e receber uma orientação inicial.</p><div class="rounded-2xl bg-blue-50 p-8 text-center"><h2 class="text-2xl font-bold text-dark mb-4">Precisa de uma avaliação técnica?</h2><p class="text-gray-600 mb-6">Envie uma mensagem pelo WhatsApp para explicar seu caso e receber uma orientação inicial.</p><a href="https://wa.me/5581993309539?text=Olá! Gostaria de informações sobre perícia digital em Rio Grande do Norte." target="_blank" rel="noopener noreferrer" class="inline-flex bg-secondary text-white font-bold px-8 py-4 rounded-full">Falar pelo WhatsApp</a></div></article></div></section></main><!-- Footer -->
+   </header><main class="pt-16"><section class="gradient-bg page-hero pt-24 sm:pt-32 pb-16 sm:pb-24"><div class="hero-orb-left" aria-hidden="true"></div><div class="hero-orb-right" aria-hidden="true"></div><div class="max-w-5xl mx-auto px-4 text-center page-hero-content"><nav aria-label="Breadcrumb" class="text-sm text-white/70 mb-6"><a href="index.html" class="hover:text-white">Início</a> <span aria-hidden="true">/</span> <span>Perícia Digital em Rio Grande do Norte</span></nav><h1 class="text-3xl sm:text-5xl font-bold text-white mb-6">Perícia Digital em Rio Grande do Norte</h1><p class="text-lg text-white/80 max-w-3xl mx-auto">Atendimento técnico remoto para perícia digital e análise forense em casos relacionados a Rio Grande do Norte, com atuação em todo o Brasil.</p></div></section><section class="py-16 sm:py-24 bg-white"><div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8"><article class="prose max-w-none"><h2 class="text-3xl font-bold text-dark mb-4">Atendimento para casos em Rio Grande do Norte</h2><p class="text-lg text-gray-600 leading-relaxed mb-10">A TM Perito Digital oferece orientação inicial, análise de evidências digitais, elaboração de laudos e assistência técnica para demandas que envolvam partes, empresas ou processos em Rio Grande do Norte.</p><h2 class="text-3xl font-bold text-dark mb-4">Serviços disponíveis</h2><p class="text-lg text-gray-600 leading-relaxed mb-10">A necessidade técnica é avaliada conforme o tipo de evidência, os quesitos e os prazos do processo. Entre em contato para apresentar o caso e receber uma orientação inicial.</p><div class="rounded-2xl bg-blue-50 p-8 text-center"><h2 class="text-2xl font-bold text-dark mb-4">Precisa de uma avaliação técnica?</h2><p class="text-gray-600 mb-6">Envie uma mensagem pelo WhatsApp para explicar seu caso e receber uma orientação inicial.</p><a href="https://wa.me/5581993309539?text=Olá! Gostaria de informações sobre perícia digital em Rio Grande do Norte." target="_blank" rel="noopener noreferrer" class="inline-flex bg-secondary text-white font-bold px-8 py-4 rounded-full">Falar pelo WhatsApp</a></div></article></div></section></main><!-- Footer -->
    <footer class="bg-dark py-12">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
